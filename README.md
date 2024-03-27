@@ -81,4 +81,3 @@ For convenience, you can add an alias to your shell configuration file to run Te
 ### License
 
 Termi is made available under the MIT License. This means you're free to use, modify, distribute, and make private use of the features provided by Termi as long as you include the original copyright and permission notice in any copies or substantial portions of the software.
-```
