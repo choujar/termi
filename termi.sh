@@ -35,11 +35,34 @@ if [[ -z "$OPENAI_API_KEY" || -z "$ANTHROPIC_API_KEY" ]]; then
   update_env
 fi
 
-# Path to the Python executable within the virtual environment
-PYTHON="./myenv/bin/python"
+# Define the path for the virtual environment
+VENV_PATH="./myenv"
 
-# Path to your Python script
-SCRIPT="./termi.py"
+# Check if the virtual environment already exists
+if [ ! -d "$VENV_PATH" ]; then
+    echo "Virtual environment not found. Creating one now..."
+    # Create the virtual environment
+    python3 -m venv $VENV_PATH
+    
+    # Activate the virtual environment
+    source $VENV_PATH/bin/activate
+    
+    echo "Virtual environment created and activated."
+    
+    # Install dependencies from requirements.txt
+    echo "Installing dependencies from requirements.txt..."
+    pip install -r requirements.txt
+    echo "Dependencies installed."
+else
+    echo "Virtual environment found. Activating..."
+    # Activate the virtual environment
+    source $VENV_PATH/bin/activate
+fi
+
+
 
 # Execute the Python script using the Python interpreter from the virtual environment
-$PYTHON $SCRIPT "$@"
+$VENV_PATH/bin/python termi.py "$@"
+
+# Deactivate the virtual environment
+deactivate
