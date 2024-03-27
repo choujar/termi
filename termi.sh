@@ -33,6 +33,11 @@ load_env
 if [[ -z "$OPENAI_API_KEY" || -z "$ANTHROPIC_API_KEY" ]]; then
   # If not, prompt the user and update .env
   update_env
+  # if they are set, print them
+else
+  echo "Open AI API Key is set to: $OPENAI_API_KEY"
+  echo "Anthropic API Key is set to: $ANTHROPIC_API_KEY"
+  
 fi
 
 # Define the path for the virtual environment
