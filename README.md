@@ -46,7 +46,7 @@ After setting up, you can start Termi by running:
 
 ```bash
 ./termi.sh
-
+```
 
 ### (Recommended) Add an Alias for Termi
 
