@@ -47,10 +47,8 @@ After setting up, you can start Termi by running:
 ```bash
 ./termi.sh
 
-Certainly, here's the markdown for the sections you specified:
 
-```markdown
-### Adding an Alias for Termi
+### (Recommended) Add an Alias for Termi
 
 For convenience, you can add an alias to your shell configuration file to run Termi from anywhere.
 
@@ -84,5 +82,3 @@ For convenience, you can add an alias to your shell configuration file to run Te
 
 Termi is made available under the MIT License. This means you're free to use, modify, distribute, and make private use of the features provided by Termi as long as you include the original copyright and permission notice in any copies or substantial portions of the software.
 ```
-
-This markdown snippet accurately reflects the instructions for adding an alias for `termi.sh` on both Unix/macOS and Windows systems, as well as the licensing information for Termi under the MIT License.
