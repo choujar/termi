@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Define the path to the .env file
-ENV_FILE="/Users/sahil/Sites/labs/scripts/talk/.env"
+ENV_FILE="./.env"
 
 # Function to load environment variables from the .env file
 load_env() {
@@ -36,10 +36,10 @@ if [[ -z "$OPENAI_API_KEY" || -z "$ANTHROPIC_API_KEY" ]]; then
 fi
 
 # Path to the Python executable within the virtual environment
-PYTHON="/Users/sahil/Sites/labs/scripts/talk/myenv/bin/python"
+PYTHON="./myenv/bin/python"
 
 # Path to your Python script
-SCRIPT="/Users/sahil/Sites/labs/scripts/talk/talk.py"
+SCRIPT="./termi.py"
 
 # Execute the Python script using the Python interpreter from the virtual environment
 $PYTHON $SCRIPT "$@"

@@ -21,9 +21,9 @@ DEBUGGING = False
 
 def printer(message, style, end="\n", flush=False):
     if style == "user":
-        print(Fore.BLUE + message, end=end, flush=flush)
+        print(Fore.BLUE + Style.BRIGHT + message, end=end, flush=flush)
     elif style == "assistant":
-        print(Fore.GREEN + message, end=end, flush=flush)
+        print(Fore.GREEN + Style.BRIGHT + message, end=end, flush=flush)
     elif style == "error":
         print(Fore.RED + message, end=end, flush=flush)
     elif style == "info":
@@ -33,7 +33,7 @@ def printer(message, style, end="\n", flush=False):
     elif style == "tip":
         print(Fore.CYAN + message, end=end, flush=flush)
     elif style == "light":
-        print(Fore.LIGHTWHITE_EX + message, end=end, flush=flush)
+        print(Fore.MAGENTA + message, end=end, flush=flush)
     elif style == "announcement":
         # Print announcement in bold with a white background
         print()
